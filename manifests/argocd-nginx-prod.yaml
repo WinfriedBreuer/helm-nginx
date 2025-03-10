@@ -9,6 +9,9 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
+    helm:      
+      valueFiles:
+        - values-prod.yaml
     # path to the folder with the YAML manifests
     path: manifests
     repoURL: https://github.com/winfriedbreuer/helm-nginx
