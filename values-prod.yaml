@@ -7,8 +7,8 @@ service:
   type: ClusterIP
 
 image:
-    repository: nginx
-    tag: 1.17.0    
+  repository: nginx
+  tag: 1.17.0    
 
 replicaCount: 2
 
