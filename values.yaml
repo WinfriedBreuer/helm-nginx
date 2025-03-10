@@ -19,6 +19,5 @@ resources:
     memory: 256Mi  
 
 configmap:
-  data:
-    version: alpine
+  data: "version: alpine"
 
