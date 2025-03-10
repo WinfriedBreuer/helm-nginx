@@ -5,9 +5,9 @@ metadata:
     app: nginx
     tag: alpine
   name: nginx-alpine
-  namespace: {{ .values.namespace.name }}
+  namespace: {{ .Values.namespace.name }}
 spec:
-  replicas: {{ .values.replicaCount }}
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: nginx
@@ -28,9 +28,9 @@ spec:
         tag: alpine
     spec:
       containers:
-      - image: {{ .values.image.repository }}:{{ .values.image.tag }}
-        imagePullPolicy: {{ .values.image.imagePullPolicy }}
+      - image: {{ .Values.image.repository }}:{{ .values.image.tag }}
+        imagePullPolicy: {{ .Values.image.imagePullPolicy }}
         name: nginx-alpine
         resources:
-{{ toYaml .values.resources | indent 12 }}
+{{ toYaml .Values.resources | indent 12 }}
       
