@@ -6,7 +6,7 @@ service:
   targetPort: 8111  
   type: ClusterIP
 
-  image:
+image:
     repository: nginx
     tag: alpine
     pullPolicy: IfNotPresent
